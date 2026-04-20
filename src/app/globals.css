@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-gray-800 font-body antialiased;
+}
+
+/* Scrollbar discrète */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-sand-100;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-sea-400 rounded-full;
+}
+
+/* Utilitaires typographiques */
+.font-display {
+  font-family: var(--font-playfair);
+}
+
+/* Section padding cohérent */
+.section-padding {
+  @apply py-20 px-4 sm:px-6 lg:px-8;
+}
+
+/* Ligne décorative */
+.decorative-line {
+  @apply w-16 h-0.5 bg-sand-400 mx-auto my-4;
+}
+
+/* Gradient sable-mer */
+.gradient-sea {
+  background: linear-gradient(135deg, #1a3d54 0%, #2281ae 50%, #78bfdd 100%);
+}
+
+.gradient-sand {
+  background: linear-gradient(135deg, #f8f0e4 0%, #e5c99a 100%);
+}
