@@ -12,9 +12,9 @@ export default function Logement() {
               Le logement
             </p>
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-sea-900 leading-tight mb-6">
-              Votre retraite
+              À deux pas
               <br />
-              <span className="text-sand-500">au bord de mer</span>
+              <span className="text-sand-500">de la digue</span>
             </h2>
             <div className="w-16 h-0.5 bg-sand-400 mb-8" />
             <div className="space-y-5 text-gray-600 leading-relaxed">
