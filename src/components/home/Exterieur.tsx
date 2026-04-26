@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import FadeIn from '@/components/shared/FadeIn';
-import { Sun, Trees, Dog, Baby } from 'lucide-react';
+import { Sun, Trees, Dog } from 'lucide-react';
 
 const atouts = [
   {
@@ -17,11 +17,6 @@ const atouts = [
     icon: Dog,
     title: 'Animaux bienvenus',
     desc: 'Votre compagnon est le bienvenu. Le jardin clôturé est parfait pour lui laisser de la liberté en toute sécurité.',
-  },
-  {
-    icon: Baby,
-    title: 'Lit bébé disponible',
-    desc: 'Un lit bébé est mis à disposition sur demande pour accueillir les tout-petits dans les meilleures conditions.',
   },
 ];
 

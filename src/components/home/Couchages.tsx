@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import FadeIn from '@/components/shared/FadeIn';
-import { Sofa, BedDouble, Star } from 'lucide-react';
+import { Sofa, BedDouble, Star, Baby } from 'lucide-react';
 
 const couchages = [
   {
@@ -8,7 +8,7 @@ const couchages = [
     title: 'Le Canapé-lit',
     subtitle: '2 personnes · Salon',
     description:
-      'Un canapé-lit de qualité supérieure qui se transforme en un vrai lit confortable. Matelas moelleux, linge de maison fourni — vos invités n\'auront pas l\'impression d\'être sur un canapé.',
+      'Un canapé-lit de qualité supérieure qui se transforme en un vrai lit confortable. Matelas moelleux, linge de maison fourni.',
     tags: ['Linge fourni', 'Matelas qualité', 'Facile à déplier'],
     image: '/images/canape.jpg',
     alt: 'Canapé-lit confortable dans le salon de l\'Atelier des Sardines',
@@ -80,6 +80,21 @@ export default function Couchages() {
             </FadeIn>
           ))}
         </div>
+
+        <FadeIn delay={0.3} className="mt-8">
+          <div className="bg-white rounded-2xl p-6 flex items-start gap-5 shadow-sm border border-sand-100">
+            <div className="w-12 h-12 bg-sand-100 rounded-xl flex items-center justify-center flex-shrink-0">
+              <Baby className="w-6 h-6 text-sand-600" />
+            </div>
+            <div>
+              <h3 className="font-semibold text-sea-900 mb-1">Lit bébé disponible</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Un lit bébé est mis à disposition sur demande pour accueillir les tout-petits
+                dans les meilleures conditions. Mentionnez-le lors de votre réservation.
+              </p>
+            </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );
