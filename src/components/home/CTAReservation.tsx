@@ -1,8 +1,7 @@
 import FadeIn from '@/components/shared/FadeIn';
 import { ExternalLink, Calendar, Shield, MessageCircle } from 'lucide-react';
 
-// TODO: Remplacer par votre vrai lien Airbnb/Booking
-const AIRBNB_URL = 'https://www.airbnb.fr';
+const AIRBNB_URL = 'https://airbnb.fr/h/atelierdessardines';
 
 const garanties = [
   { icon: Shield, text: 'Paiement sécurisé via Airbnb' },
