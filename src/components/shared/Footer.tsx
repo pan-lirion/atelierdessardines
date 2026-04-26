@@ -18,7 +18,7 @@ export default function Footer() {
             la Côte d&apos;Opale.
           </p>
           <p className="text-xs mt-4 text-white/50">
-            Villa La Walkyrie
+            Villa La Valkyrie
           </p>
         </div>
 

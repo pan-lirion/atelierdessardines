@@ -1,21 +1,27 @@
 import LivretSection, { InfoBox } from './LivretSection';
 import { Trash2 } from 'lucide-react';
 
-const tris = [
+const collecte = [
   {
-    couleur: 'Jaune',
-    emoji: '🟡',
-    contenu: 'Emballages en plastique, cartons, boîtes métal, briques alimentaires',
-  },
-  {
-    couleur: 'Vert',
-    emoji: '🟢',
-    contenu: 'Verre (bouteilles, bocaux) — à déposer dans les colonnes à verre',
-  },
-  {
-    couleur: 'Gris / Noir',
     emoji: '⚫',
-    contenu: 'Ordures ménagères résiduelles (restes alimentaires non compostables, etc.)',
+    bac: 'Bac gris — ordures ménagères',
+    jour: 'Mardi',
+    frequence: 'Toutes les semaines',
+    contenu: 'Restes alimentaires, déchets non recyclables',
+  },
+  {
+    emoji: '🟡',
+    bac: 'Bac jaune — emballages & papiers',
+    jour: 'Mercredi',
+    frequence: 'Une semaine sur deux (en alternance avec le bac bleu)',
+    contenu: 'Plastiques, cartons, boîtes métal, briques alimentaires',
+  },
+  {
+    emoji: '🔵',
+    bac: 'Bac bleu — papiers',
+    jour: 'Mercredi',
+    frequence: 'Une semaine sur deux (en alternance avec le bac jaune)',
+    contenu: 'Journaux, magazines, courriers, papiers propres',
   },
 ];
 
@@ -23,34 +29,34 @@ export default function SectionDechets() {
   return (
     <LivretSection id="dechets" icon={Trash2} title="Le tri des déchets" accent="green">
       <p>
-        À Wimereux, le tri sélectif est obligatoire. Merci de respecter les
-        consignes de tri locales. Les poubelles se trouvent{' '}
-        <strong>[À compléter : emplacement dans l&apos;appartement / cour]</strong>.
+        À Wimereux, le tri sélectif est obligatoire. Les poubelles se trouvent
+        à <strong>l&apos;entrée de la villa</strong> — vous ne pouvez pas les rater.
       </p>
 
       <div className="space-y-3 pt-1">
-        {tris.map(({ couleur, emoji, contenu }) => (
-          <div
-            key={couleur}
-            className="flex items-start gap-3 bg-white rounded-xl p-3 shadow-xs"
-          >
-            <span className="text-2xl flex-shrink-0">{emoji}</span>
-            <div>
-              <p className="font-semibold text-sm">Poubelle {couleur}</p>
-              <p className="text-gray-600 text-sm">{contenu}</p>
+        {collecte.map(({ emoji, bac, jour, frequence, contenu }) => (
+          <div key={bac} className="bg-white rounded-xl p-4 shadow-xs">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-2xl flex-shrink-0">{emoji}</span>
+              <div>
+                <p className="font-semibold text-sm text-gray-800">{bac}</p>
+                <p className="text-xs text-sea-600 font-medium">
+                  📅 {jour} — {frequence}
+                </p>
+              </div>
             </div>
+            <p className="text-gray-500 text-xs pl-10">{contenu}</p>
           </div>
         ))}
       </div>
 
-      <div>
-        <p className="font-semibold text-gray-800 mb-1">📅 Jours de collecte</p>
-        <p>[À compléter : jours de passage des bennes dans la rue.]</p>
-      </div>
+      <InfoBox type="info">
+        Bacs jaune et bleu collectés le <strong>mercredi en alternance</strong> —
+        en cas de doute, regardez quel bac vos voisins ont sorti la veille.
+      </InfoBox>
 
       <InfoBox type="tip">
-        Les colonnes à verre les plus proches se trouvent{' '}
-        <strong>[À compléter : intersection / parking proche]</strong>.
+        Colonnes à verre (bouteilles & bocaux) disponibles <strong>place Foch</strong>.
       </InfoBox>
     </LivretSection>
   );

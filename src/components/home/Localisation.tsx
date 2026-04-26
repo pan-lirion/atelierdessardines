@@ -29,7 +29,7 @@ const pointsInteret = [
   {
     icon: Utensils,
     label: 'Restaurants du front de mer',
-    distance: '7 min à pied',
+    distance: '5 min à pied',
     color: 'bg-sea-100 text-sea-600',
   },
   {

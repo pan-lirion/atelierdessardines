@@ -28,7 +28,7 @@ export default function SectionCanapeLit() {
         <Steps
           items={[
             'Retirez les coussins du canapé et posez-les de côté',
-            'Soulevez légèrement l\'assise vers vous et tirez',
+            'Tirez sur la lanière située au centre du dossier du canapé',
             'Dépliez le matelas en tirant la structure vers vous jusqu\'à ce qu\'elle soit à plat',
             'Récupérez la couette dans le meuble du salon et les oreillers dans le rangement intérieur',
           ]}
@@ -39,7 +39,7 @@ export default function SectionCanapeLit() {
         <p className="font-semibold text-gray-800 mb-2">Comment le replier au départ</p>
         <Steps
           items={[
-            'Retirez les draps et pliez-les proprement',
+            'Retirez les draps',
             'Rangez la couette dans le meuble du salon',
             'Repliez le matelas en poussant la structure vers le canapé',
             'Ramenez l\'assise en position canapé et replacez les coussins',

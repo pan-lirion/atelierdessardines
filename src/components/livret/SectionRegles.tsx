@@ -8,7 +8,9 @@ const regles = [
   { emoji: '👥', texte: 'Pas d\'invités non prévus — la capacité est de 4 personnes maximum' },
   { emoji: '⚖️', texte: 'Aucune activité illégale dans le logement' },
   { emoji: '♻️', texte: 'Pensez au tri sélectif (voir section Déchets)' },
+  { emoji: '🐾', texte: 'Animaux bienvenus ! Le jardin clôturé est à leur disposition — pensez à ramasser les déjections dans la pelouse' },
   { emoji: '🛋️', texte: 'Le canapé et le lit ne sont pas réservés aux animaux' },
+  { emoji: '🚭', texte: 'Non-fumeur dans le logement — fumez côté jardin en ramassant vos mégots' },
   { emoji: '🪑', texte: 'Ranger le mobilier extérieur après utilisation' },
 ];
 

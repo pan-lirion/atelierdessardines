@@ -16,8 +16,24 @@ export default function SectionBienvenue() {
       <p>
         Que vous soyez venus pour les balades sur la digue, les couchers de
         soleil sur la mer ou simplement vous reposer — profitez pleinement de
-        chaque instant.
+        chaque instant, y compris du <strong>jardin privatif clôturé</strong> et
+        de ses deux terrasses, à votre disposition exclusive.
       </p>
+
+      {/* Infos rapides */}
+      <div className="grid grid-cols-2 gap-2 text-sm">
+        {[
+          { emoji: '🐾', label: 'Animaux bienvenus' },
+          { emoji: '👶', label: 'Lit bébé sur demande' },
+          { emoji: '🌿', label: 'Jardin privatif clôturé' },
+          { emoji: '☀️', label: '2 terrasses' },
+        ].map(({ emoji, label }) => (
+          <div key={label} className="flex items-center gap-2 bg-white rounded-xl px-3 py-2 shadow-xs">
+            <span>{emoji}</span>
+            <span className="text-gray-700 font-medium text-xs">{label}</span>
+          </div>
+        ))}
+      </div>
 
       {/* Contact */}
       <div className="bg-white rounded-xl p-4 shadow-xs space-y-2">
@@ -44,16 +60,14 @@ export default function SectionBienvenue() {
           <Wifi className="w-4 h-4" />
           Connexion WiFi
         </div>
-        <div className="grid grid-cols-2 gap-3">
-          <div className="bg-white/15 rounded-lg p-3">
-            <p className="text-xs text-white/70 mb-1">Réseau</p>
-            <p className="font-mono font-bold text-sm">Livebox D-930</p>
-          </div>
-          <div className="bg-white/15 rounded-lg p-3">
-            <p className="text-xs text-white/70 mb-1">Mot de passe</p>
-            <p className="font-mono font-bold text-sm tracking-wide">Sardines62*</p>
-          </div>
+        <div className="bg-white/15 rounded-lg p-3">
+          <p className="text-xs text-white/70 mb-1">Réseau</p>
+          <p className="font-mono font-bold text-sm">Livebox D-930</p>
         </div>
+        <p className="text-sm text-white/80">
+          🔑 Le mot de passe vous a été communiqué par SMS — vous pouvez également
+          le retrouver dans le livret d&apos;accueil papier disponible dans l&apos;appartement.
+        </p>
       </div>
 
       <InfoBox type="tip">

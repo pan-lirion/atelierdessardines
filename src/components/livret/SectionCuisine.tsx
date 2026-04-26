@@ -5,7 +5,7 @@ const inventaire = [
   { cat: 'Cuisson', items: ['Four combiné / Micro-ondes', 'Plaques de cuisson', 'Plancha électrique', 'Raclette à la bougie (saison)'] },
   { cat: 'Boissons & petit-déjeuner', items: ['Machine à café / Bouilloire', 'Dosettes café, thé, tisanes & sucre fournies', 'Cafetière'] },
   { cat: 'Réfrigération', items: ['Réfrigérateur avec freezer', 'Pain de glace disponible dans le freezer (pour pique-niques !)'] },
-  { cat: 'Ustensiles', items: ['Poêles (2 tailles)', 'Casseroles (2 tailles)', 'Passoire', 'Plat à four', 'Planche à découper', 'Couteaux de cuisine', 'Spatules, louches, fouet'] },
+  { cat: 'Ustensiles', items: ['Poêles (2 tailles)', 'Casseroles (2 tailles)', 'Passoire', 'Plat à four', 'Planche à découper', 'Couteaux de cuisine', 'Couteau à huîtres', 'Spatules, louches, fouet'] },
   { cat: 'Vaisselle', items: ['Assiettes plates & creuses', 'Verres & mugs', 'Couverts complets', 'Saladier', 'Ouvre-boîte, décapsuleur, tire-bouchon'] },
 ];
 

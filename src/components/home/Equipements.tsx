@@ -6,8 +6,11 @@ import {
   Thermometer,
   Laptop,
   Coffee,
-  Wind,
   Droplets,
+  Dog,
+  Baby,
+  Trees,
+  Sun,
 } from 'lucide-react';
 
 const equipements = [
@@ -50,6 +53,26 @@ const equipements = [
     icon: Coffee,
     title: 'Kit de bienvenue',
     desc: 'Café, thé et quelques petits extras pour démarrer votre séjour du bon pied.',
+  },
+  {
+    icon: Trees,
+    title: 'Jardin privatif clôturé',
+    desc: 'Un jardin entièrement clos, sans vis-à-vis. Rare à Wimereux — profitez-en !',
+  },
+  {
+    icon: Sun,
+    title: '2 terrasses',
+    desc: 'Une terrasse de repos et une terrasse de jardin orientée plein sud. Soleil toute la journée.',
+  },
+  {
+    icon: Dog,
+    title: 'Animaux acceptés',
+    desc: 'Votre animal de compagnie est le bienvenu. Le jardin clôturé lui offre une liberté en toute sécurité.',
+  },
+  {
+    icon: Baby,
+    title: 'Lit bébé disponible',
+    desc: 'Un lit bébé est mis à disposition sur demande pour accueillir les tout-petits.',
   },
 ];
 

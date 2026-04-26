@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'location vacances Wimereux',
     "location bord de mer Côte d'Opale",
     'atelier des sardines',
-    'villa la walkyrie',
+    'villa la valkyrie',
   ],
   openGraph: {
     title: "L'Atelier des Sardines — Location à Wimereux",

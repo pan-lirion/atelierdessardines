@@ -18,7 +18,7 @@ const couchages = [
     title: 'L\'Alcôve',
     subtitle: '2 personnes · Espace privatif',
     description:
-      'Un lit encastré entre deux cloisons crée une alcôve intime et cosy. Matelas de qualité, lumières tamisées, rangements intégrés. Un cocon parfait pour se ressourcer au son des mouettes.',
+      'Un lit encastré entre deux cloisons crée une alcôve intime et cosy. Matelas de qualité, lumières tamisées. Un cocon parfait pour se ressourcer au son des mouettes.',
     tags: ['Matelas premium', 'Espace privatif', 'Ambiance cosy'],
     image: '/images/alcove-espace.jpg',
     alt: 'Alcôve avec lit encastré et espace bureau',

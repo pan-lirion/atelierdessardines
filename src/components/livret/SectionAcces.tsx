@@ -8,7 +8,7 @@ export default function SectionAcces() {
         <p className="text-xs text-gray-400 mb-1">Adresse</p>
         <p className="font-semibold text-gray-800">
           7 rue du Maréchal de Lattre de Tassigny
-          <br />62930 Wimereux — Villa La Walkyrie
+          <br />62930 Wimereux — Villa La Valkyrie
         </p>
       </div>
 
@@ -29,9 +29,15 @@ export default function SectionAcces() {
         contactez Manu au <strong>07.81.81.08.69</strong> en amont.
       </InfoBox>
 
-      <div>
-        <p className="font-semibold text-gray-800 mb-2">🔑 Récupération des clés</p>
-        <p>[À compléter : code et emplacement de la boîte à clé]</p>
+      <div className="bg-white rounded-xl p-4 shadow-xs space-y-2">
+        <p className="font-semibold text-gray-800 mb-1">🔑 Récupération des clés</p>
+        <p className="text-sm text-gray-600">
+          La boîte à clé se trouve sur la <strong>porte d&apos;accès au jardin privatif,
+          sur le côté droit de la villa</strong>.
+        </p>
+        <p className="text-sm text-gray-600">
+          Le code de la boîte à clé vous a été communiqué par SMS avant votre arrivée.
+        </p>
       </div>
 
       <div>

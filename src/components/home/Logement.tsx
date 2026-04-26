@@ -19,7 +19,7 @@ export default function Logement() {
             <div className="w-16 h-0.5 bg-sand-400 mb-8" />
             <div className="space-y-5 text-gray-600 leading-relaxed">
               <p>
-                Niché au sein de la Villa La Walkyrie, <strong>L&apos;Atelier des Sardines</strong> est
+                Niché au sein de la Villa La Valkyrie, <strong>L&apos;Atelier des Sardines</strong>&nbsp;est
                 un appartement pensé pour ceux qui veulent vivre Wimereux de
                 l&apos;intérieur — loin des hôtels sans âme, près de tout ce qui
                 compte.

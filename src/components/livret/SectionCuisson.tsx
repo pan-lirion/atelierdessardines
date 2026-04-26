@@ -12,7 +12,7 @@ export default function SectionCuisson() {
         </p>
         <Steps
           items={[
-            'Placez votre plat dans le micro-ondes (pas de métal ni d\'alu !)',
+            "Placez votre plat dans le micro-ondes (pas de métal ni d'alu !)",
             'Sélectionnez la puissance et le temps',
             'Appuyez sur Start',
           ]}
@@ -20,12 +20,18 @@ export default function SectionCuisson() {
       </div>
 
       <div>
-        <p className="font-semibold text-gray-800 mb-2">🍳 Plaques de cuisson</p>
-        <p>[À compléter : induction / vitrocéramique, mode d&apos;emploi si nécessaire]</p>
+        <p className="font-semibold text-gray-800 mb-2">🍳 Plaques vitrocéramique</p>
+        <p>
+          Les plaques sont en <strong>vitrocéramique</strong>. Attendez
+          qu&apos;elles soient complètement refroidies avant de les nettoyer.
+        </p>
       </div>
 
       <div>
-        <p className="font-semibold text-gray-800 mb-2">🧀 Raclette à la bougie <span className="text-xs font-normal text-gray-400">(en saison froide)</span></p>
+        <p className="font-semibold text-gray-800 mb-2">
+          🧀 Raclette à la bougie{' '}
+          <span className="text-xs font-normal text-gray-400">(automne / hiver)</span>
+        </p>
         <p>
           Besoin de réconfort par temps froid ? Des poêlons à raclette à la
           bougie sont à votre disposition !
@@ -43,8 +49,14 @@ export default function SectionCuisson() {
       </div>
 
       <div>
-        <p className="font-semibold text-gray-800 mb-2">🔥 Plancha électrique</p>
-        <p>Une plancha électrique est disponible pour vos grillades — idéale sur la terrasse en été.</p>
+        <p className="font-semibold text-gray-800 mb-2">
+          🔥 Plancha électrique{' '}
+          <span className="text-xs font-normal text-gray-400">(printemps / été)</span>
+        </p>
+        <p>
+          Une plancha électrique est disponible en saison pour vos grillades —
+          idéale sur la terrasse.
+        </p>
       </div>
 
       <InfoBox type="warning">
