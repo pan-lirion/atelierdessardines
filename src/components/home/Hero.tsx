@@ -11,8 +11,8 @@ export default function Hero() {
       {/* Image de fond */}
       <div className="absolute inset-0">
         <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/9/98/Front_de_mer_Wimereux.JPG"
-          alt="Front de mer de Wimereux avec les villas Belle Époque"
+          src="/images/hero.jpg"
+          alt="Coucher de soleil sur la plage de Wimereux, Côte d'Opale"
           fill
           priority
           className="object-cover object-center"

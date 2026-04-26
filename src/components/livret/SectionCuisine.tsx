@@ -2,19 +2,19 @@ import LivretSection, { InfoBox } from './LivretSection';
 import { UtensilsCrossed } from 'lucide-react';
 
 const inventaire = [
-  { cat: 'Cuisson', items: ['Four électrique', 'Micro-ondes', 'Plaques de cuisson', 'Bouilloire', 'Cafetière filtre / expresso'] },
-  { cat: 'Ustensiles', items: ['Poêles (2 tailles)', 'Casseroles (2 tailles)', 'Passoire / égouttoir', 'Plat à four', 'Planche à découper', 'Couteaux de cuisine'] },
-  { cat: 'Vaisselle', items: ['Assiettes plates & creuses (4)', 'Verres & mugs (4)', 'Couverts complets (4)', 'Saladier', 'Carafe'] },
-  { cat: 'Petits équipements', items: ['Ouvre-boîte', 'Décapsuleur / tire-bouchon', 'Économe', 'Spatules & louches', 'Fouet'] },
-  { cat: 'Réfrigération', items: ['Réfrigérateur avec freezer', 'Bacs à glaçons disponibles'] },
+  { cat: 'Cuisson', items: ['Four combiné / Micro-ondes', 'Plaques de cuisson', 'Plancha électrique', 'Raclette à la bougie (saison)'] },
+  { cat: 'Boissons & petit-déjeuner', items: ['Machine à café / Bouilloire', 'Dosettes café, thé, tisanes & sucre fournies', 'Cafetière'] },
+  { cat: 'Réfrigération', items: ['Réfrigérateur avec freezer', 'Pain de glace disponible dans le freezer (pour pique-niques !)'] },
+  { cat: 'Ustensiles', items: ['Poêles (2 tailles)', 'Casseroles (2 tailles)', 'Passoire', 'Plat à four', 'Planche à découper', 'Couteaux de cuisine', 'Spatules, louches, fouet'] },
+  { cat: 'Vaisselle', items: ['Assiettes plates & creuses', 'Verres & mugs', 'Couverts complets', 'Saladier', 'Ouvre-boîte, décapsuleur, tire-bouchon'] },
 ];
 
 export default function SectionCuisine() {
   return (
     <LivretSection id="cuisine" icon={UtensilsCrossed} title="La cuisine — inventaire" accent="green">
       <p>
-        La cuisine est entièrement équipée. Voici ce que vous trouverez à
-        votre disposition :
+        La cuisine est entièrement équipée. Vous trouverez également des
+        dosettes de café, thé et tisanes pour vos pauses détente.
       </p>
 
       <div className="space-y-4 pt-1">
@@ -25,8 +25,8 @@ export default function SectionCuisine() {
             </p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1">
               {items.map((item) => (
-                <li key={item} className="flex items-center gap-2 text-gray-600">
-                  <span className="w-1.5 h-1.5 bg-sea-400 rounded-full flex-shrink-0" />
+                <li key={item} className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-1.5 h-1.5 bg-sea-400 rounded-full flex-shrink-0 mt-1.5" />
                   {item}
                 </li>
               ))}
@@ -36,14 +36,9 @@ export default function SectionCuisine() {
       </div>
 
       <InfoBox type="tip">
-        Si vous manquez de quelque chose (épices, huile d&apos;olive de base...), un
-        supermarché et des épiceries se trouvent rue Carnot à 5 min à pied.
+        Un supermarché et des épiceries se trouvent rue Carnot à 5 min à pied.
+        Le marché a lieu le mardi et vendredi matin place Albert 1er (hors saison).
       </InfoBox>
-
-      <p className="text-xs text-gray-400">
-        * La liste peut varier légèrement selon les séjours. En cas d&apos;équipement
-        manquant, contactez-nous.
-      </p>
     </LivretSection>
   );
 }

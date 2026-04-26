@@ -5,10 +5,9 @@ export default function SectionMachineALaver() {
   return (
     <LivretSection id="machine-laver" icon={WashingMachine} title="La machine à laver" accent="sea">
       <p>
-        La machine à laver se trouve{' '}
-        <strong>[À compléter : dans la salle de bain / cuisine / couloir]</strong>.
-        La lessive se trouve dans{' '}
-        <strong>[À compléter : meuble / étagère / sous l&apos;évier]</strong>.
+        Des <strong>dosettes sont à votre disposition</strong> — la dosette
+        pour la machine à laver est celle sans poudre (pas celle du
+        lave-vaisselle). Un étendoir à linge est également disponible.
       </p>
 
       <div>
@@ -16,25 +15,21 @@ export default function SectionMachineALaver() {
         <Steps
           items={[
             'Chargez le linge en ne dépassant pas les 3/4 du tambour',
-            'Versez la lessive dans le bac marqué "II" (lavage principal)',
-            'Sélectionnez le programme adapté : Coton 40°C pour le quotidien, Délicat pour les sous-vêtements',
+            'Placez une dosette directement dans le tambour (pas dans le bac)',
+            'Sélectionnez le programme : Coton 40°C pour le quotidien, Délicat pour les sous-vêtements',
             'Appuyez sur Start',
-            'Récupérez le linge dès la fin du cycle pour éviter les faux plis',
+            'Récupérez le linge dès la fin pour éviter les faux plis',
           ]}
         />
       </div>
 
       <div>
         <p className="font-semibold text-gray-800 mb-2">🧺 Étendage</p>
-        <p>
-          [À compléter : étendoir disponible / corde à linge dans le jardin /
-          balcon, etc.]
-        </p>
+        <p>Un étendoir à linge est disponible dans l&apos;appartement.</p>
       </div>
 
       <InfoBox type="tip">
-        Évitez de lancer une machine la nuit si les voisins sont proches — les
-        vibrations peuvent s&apos;entendre.
+        Évitez de lancer une machine la nuit par égard pour les voisins.
       </InfoBox>
     </LivretSection>
   );

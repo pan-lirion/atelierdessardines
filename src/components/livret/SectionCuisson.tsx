@@ -5,42 +5,52 @@ export default function SectionCuisson() {
   return (
     <LivretSection id="cuisson" icon={Flame} title="Le four & micro-ondes" accent="orange">
       <div>
-        <p className="font-semibold text-gray-800 mb-2">🔥 Four</p>
-        <p className="mb-3">
-          Le four est de type <strong>[À compléter : électrique / chaleur
-          tournante]</strong>. Il chauffe jusqu&apos;à 250°C.
+        <p className="font-semibold text-gray-800 mb-2">📡 Micro-ondes combiné</p>
+        <p className="mb-2">
+          Le mode d&apos;emploi complet se trouve dans le <strong>placard
+          au-dessus</strong> du micro-ondes.
         </p>
         <Steps
           items={[
-            'Tournez le bouton de gauche pour sélectionner le mode de cuisson (conventionnel, chaleur tournante, gril)',
-            'Tournez le bouton de droite pour régler la température',
-            'Le voyant lumineux s\'éteint quand la température est atteinte',
-            'Après utilisation, ramenez les deux boutons sur 0',
-          ]}
-        />
-      </div>
-
-      <InfoBox type="warning">
-        Ne laissez jamais le four allumé sans surveillance. Pensez à l&apos;éteindre
-        après utilisation.
-      </InfoBox>
-
-      <div>
-        <p className="font-semibold text-gray-800 mb-2">📡 Micro-ondes</p>
-        <Steps
-          items={[
-            'Placez votre plat dans le micro-ondes (pas de métal !)',
-            'Tournez le bouton de gauche pour régler la puissance (800W recommandé)',
-            'Tournez le bouton de droite pour régler le temps',
-            'Appuyez sur Start ou le bouton central',
+            'Placez votre plat dans le micro-ondes (pas de métal ni d\'alu !)',
+            'Sélectionnez la puissance et le temps',
+            'Appuyez sur Start',
           ]}
         />
       </div>
 
       <div>
         <p className="font-semibold text-gray-800 mb-2">🍳 Plaques de cuisson</p>
-        <p>[À compléter : induction / vitrocéramique / gaz, mode d&apos;emploi.]</p>
+        <p>[À compléter : induction / vitrocéramique, mode d&apos;emploi si nécessaire]</p>
       </div>
+
+      <div>
+        <p className="font-semibold text-gray-800 mb-2">🧀 Raclette à la bougie <span className="text-xs font-normal text-gray-400">(en saison froide)</span></p>
+        <p>
+          Besoin de réconfort par temps froid ? Des poêlons à raclette à la
+          bougie sont à votre disposition !
+        </p>
+        <ul className="mt-2 space-y-1 text-sm">
+          <li className="flex items-start gap-2">
+            <span className="w-1.5 h-1.5 bg-orange-400 rounded-full flex-shrink-0 mt-1.5" />
+            Les bougies sont fournies
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="w-1.5 h-1.5 bg-orange-400 rounded-full flex-shrink-0 mt-1.5" />
+            2 à 3 bougies sont nécessaires pour une bonne chauffe
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <p className="font-semibold text-gray-800 mb-2">🔥 Plancha électrique</p>
+        <p>Une plancha électrique est disponible pour vos grillades — idéale sur la terrasse en été.</p>
+      </div>
+
+      <InfoBox type="warning">
+        Ne laissez jamais les plaques allumées sans surveillance. Vérifiez
+        qu&apos;elles sont bien éteintes avant de quitter la cuisine.
+      </InfoBox>
     </LivretSection>
   );
 }

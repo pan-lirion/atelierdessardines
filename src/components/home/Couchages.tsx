@@ -10,8 +10,8 @@ const couchages = [
     description:
       'Un canapé-lit de qualité supérieure qui se transforme en un vrai lit confortable. Matelas moelleux, linge de maison fourni — vos invités n\'auront pas l\'impression d\'être sur un canapé.',
     tags: ['Linge fourni', 'Matelas qualité', 'Facile à déplier'],
-    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80',
-    alt: 'Canapé-lit confortable dans le salon',
+    image: '/images/canape.jpg',
+    alt: 'Canapé-lit confortable dans le salon de l\'Atelier des Sardines',
   },
   {
     icon: BedDouble,
@@ -20,8 +20,8 @@ const couchages = [
     description:
       'Un lit encastré entre deux cloisons crée une alcôve intime et cosy. Matelas de qualité, lumières tamisées, rangements intégrés. Un cocon parfait pour se ressourcer au son des mouettes.',
     tags: ['Matelas premium', 'Espace privatif', 'Ambiance cosy'],
-    image: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80',
-    alt: 'Alcôve avec lit encastré',
+    image: '/images/alcove-espace.jpg',
+    alt: 'Alcôve avec lit encastré et espace bureau',
   },
 ];
 
@@ -45,7 +45,6 @@ export default function Couchages() {
           {couchages.map(({ icon: Icon, title, subtitle, description, tags, image, alt }, i) => (
             <FadeIn key={title} delay={i * 0.15}>
               <div className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group">
-                {/* Image */}
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <Image
                     src={image}
@@ -54,21 +53,17 @@ export default function Couchages() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                  {/* Badge */}
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 flex items-center gap-2">
                     <Icon className="w-4 h-4 text-sea-600" />
                     <span className="text-xs font-semibold text-sea-800">{subtitle}</span>
                   </div>
                 </div>
 
-                {/* Contenu */}
                 <div className="p-7">
                   <h3 className="font-display text-2xl font-bold text-sea-900 mb-3">
                     {title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed mb-5">{description}</p>
-
-                  {/* Tags */}
                   <div className="flex flex-wrap gap-2">
                     {tags.map((tag) => (
                       <span

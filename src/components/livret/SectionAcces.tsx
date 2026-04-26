@@ -4,47 +4,70 @@ import { KeyRound } from 'lucide-react';
 export default function SectionAcces() {
   return (
     <LivretSection id="acces" icon={KeyRound} title="Accès & stationnement" accent="sea">
-      <InfoBox type="info">
-        Adresse : 7 rue du Maréchal de Lattre de Tassigny, 62930 Wimereux —
-        Villa La Walkyrie.
+      <div className="bg-white rounded-xl p-4 shadow-xs">
+        <p className="text-xs text-gray-400 mb-1">Adresse</p>
+        <p className="font-semibold text-gray-800">
+          7 rue du Maréchal de Lattre de Tassigny
+          <br />62930 Wimereux — Villa La Walkyrie
+        </p>
+      </div>
+
+      {/* Horaires */}
+      <div className="grid grid-cols-2 gap-3">
+        <div className="bg-green-50 border border-green-200 rounded-xl p-4 text-center">
+          <p className="text-2xl font-bold text-green-700">15h00</p>
+          <p className="text-xs text-green-600 mt-1">Arrivée à partir de</p>
+        </div>
+        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-center">
+          <p className="text-2xl font-bold text-amber-700">11h00</p>
+          <p className="text-xs text-amber-600 mt-1">Départ au plus tard</p>
+        </div>
+      </div>
+
+      <InfoBox type="tip">
+        Arrivée anticipée ou départ tardif possible selon disponibilités —
+        contactez Manu au <strong>07.81.81.08.69</strong> en amont.
       </InfoBox>
 
       <div>
         <p className="font-semibold text-gray-800 mb-2">🔑 Récupération des clés</p>
-        <p>
-          [À compléter par le propriétaire : boîte à clés / remise en mains
-          propres / autre système.]
-        </p>
+        <p>[À compléter : code et emplacement de la boîte à clé]</p>
       </div>
 
       <div>
         <p className="font-semibold text-gray-800 mb-2">🚗 Stationnement</p>
         <p>
-          [À compléter : rue, parking public proche, gratuité / zones horaires,
-          etc.]
+          Le stationnement est <strong>gratuit dans la rue</strong> devant le
+          logement. Profitez-en !
         </p>
+      </div>
+
+      <div>
+        <p className="font-semibold text-gray-800 mb-2">⚡ Recharge électrique</p>
+        <ul className="space-y-1 text-sm">
+          {[
+            'Carrefour Market de Wimille — à quelques minutes en voiture',
+            'Place Foch à Wimereux',
+            'Auchan Saint-Martin-lès-Boulogne',
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 bg-sea-400 rounded-full flex-shrink-0 mt-1.5" />
+              {item}
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div>
         <p className="font-semibold text-gray-800 mb-2">🚂 En train</p>
         <Steps
           items={[
-            'Depuis Paris Gare du Nord : TER Côte d\'Opale jusqu\'à Boulogne-sur-Mer (~2h30)',
-            'Depuis Boulogne-sur-Mer : TER ou bus jusqu\'à la gare de Wimereux',
+            "Depuis Paris Gare du Nord : TER Côte d'Opale jusqu'à Boulogne-sur-Mer (~2h30)",
+            'Correspondance TER ou bus jusqu\'à la gare de Wimereux',
             'Depuis la gare de Wimereux : 5 min à pied jusqu\'à l\'appartement',
           ]}
         />
       </div>
-
-      <div>
-        <p className="font-semibold text-gray-800 mb-2">🏠 Entrée dans l&apos;appartement</p>
-        <p>[À compléter : code de la porte, étage, digicode, etc.]</p>
-      </div>
-
-      <InfoBox type="tip">
-        La gare de Wimereux est à 5 minutes à pied. Pratique pour arriver sans
-        voiture et explorer la Côte d&apos;Opale en train !
-      </InfoBox>
     </LivretSection>
   );
 }

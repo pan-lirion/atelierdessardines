@@ -21,8 +21,8 @@ export default function Teletravail() {
             <div className="relative">
               <div className="rounded-3xl overflow-hidden aspect-[4/3]">
                 <Image
-                  src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=800&q=80"
-                  alt="Espace télétravail"
+                  src="/images/bureau.jpg"
+                  alt="Bureau mural avec laptop, espace télétravail de l'Atelier des Sardines"
                   width={700}
                   height={525}
                   className="w-full h-full object-cover"

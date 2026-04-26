@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Waves, MapPin, BookOpen } from 'lucide-react';
+import { Waves, MapPin, BookOpen, Download } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -58,6 +58,16 @@ export default function Footer() {
               <Link href="#localisation" className="hover:text-white transition-colors">
                 Comment venir
               </Link>
+            </li>
+            <li>
+              <a
+                href="/livret.pdf"
+                download="Livret-Atelier-des-Sardines.pdf"
+                className="hover:text-white transition-colors inline-flex items-center gap-1.5"
+              >
+                <Download className="w-3.5 h-3.5" />
+                Livret en PDF
+              </a>
             </li>
           </ul>
         </div>

@@ -10,25 +10,29 @@ export default function SectionCanapeLit() {
       </p>
 
       <div>
+        <p className="font-semibold text-gray-800 mb-2">📦 Où trouver la literie</p>
+        <ul className="space-y-2 text-sm">
+          <li className="flex items-start gap-2">
+            <span className="w-1.5 h-1.5 bg-sand-400 rounded-full flex-shrink-0 mt-1.5" />
+            <span><strong>La couette</strong> se trouve dans le meuble du salon</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="w-1.5 h-1.5 bg-sand-400 rounded-full flex-shrink-0 mt-1.5" />
+            <span><strong>Les oreillers</strong> sont dans le rangement intérieur du canapé-lit</span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
         <p className="font-semibold text-gray-800 mb-2">Comment le déplier</p>
         <Steps
           items={[
             'Retirez les coussins du canapé et posez-les de côté',
             'Soulevez légèrement l\'assise vers vous et tirez',
             'Dépliez le matelas en tirant la structure vers vous jusqu\'à ce qu\'elle soit à plat',
-            'Assurez-vous que les pieds/roulettes sont bien stabilisés',
+            'Récupérez la couette dans le meuble du salon et les oreillers dans le rangement intérieur',
           ]}
         />
-      </div>
-
-      <div>
-        <p className="font-semibold text-gray-800 mb-2">📦 Les draps et la literie</p>
-        <p>
-          Les draps propres et les oreillers se trouvent dans{' '}
-          <strong>[À compléter : placard / tiroir / meuble]</strong>.
-          Une couverture supplémentaire est disponible dans{' '}
-          <strong>[À compléter]</strong>.
-        </p>
       </div>
 
       <div>
@@ -36,16 +40,16 @@ export default function SectionCanapeLit() {
         <Steps
           items={[
             'Retirez les draps et pliez-les proprement',
+            'Rangez la couette dans le meuble du salon',
             'Repliez le matelas en poussant la structure vers le canapé',
-            'Ramenez l\'assise en position canapé',
-            'Replacez les coussins',
+            'Ramenez l\'assise en position canapé et replacez les coussins',
           ]}
         />
       </div>
 
       <InfoBox type="tip">
-        Merci de replier le canapé-lit avant votre départ — consultez la
-        checklist dans la section Départ.
+        Merci de replier le canapé-lit avant votre départ — voir la checklist
+        dans la section Départ.
       </InfoBox>
     </LivretSection>
   );

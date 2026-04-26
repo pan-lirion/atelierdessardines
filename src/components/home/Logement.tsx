@@ -26,8 +26,8 @@ export default function Logement() {
               </p>
               <p>
                 Son nom ? Un hommage tendre à l&apos;histoire ouvrière et maritime de
-                la Côte d&apos;Opale. Ses pierres, ses volumes, sa lumière qui change
-                avec les marées.
+                la Côte d&apos;Opale — jusqu&apos;à la grande fresque de sardines qui
+                habille le mur du salon.
               </p>
               <p>
                 L&apos;appartement allie le charme authentique de l&apos;architecture
@@ -63,12 +63,13 @@ export default function Logement() {
           <FadeIn direction="left" delay={0.2}>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
+                {/* Photo signature : fresque sardines + alcôve */}
                 <div className="rounded-2xl overflow-hidden aspect-[3/4]">
                   <Image
-                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80"
-                    alt="Salon de l'Atelier des Sardines"
-                    width={400}
-                    height={530}
+                    src="/images/salon-fresque.jpg"
+                    alt="Salon avec la grande fresque sardines et vue sur l'alcôve"
+                    width={600}
+                    height={800}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -76,19 +77,19 @@ export default function Logement() {
               <div className="space-y-4 pt-8">
                 <div className="rounded-2xl overflow-hidden aspect-square">
                   <Image
-                    src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80"
-                    alt="Cuisine équipée"
-                    width={400}
-                    height={400}
+                    src="/images/cuisine.jpg"
+                    alt="Cuisine bleue entièrement équipée"
+                    width={500}
+                    height={500}
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden aspect-[4/3]">
                   <Image
-                    src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&q=80"
-                    alt="Espace de détente"
-                    width={400}
-                    height={300}
+                    src="/images/terrasse.jpg"
+                    alt="Terrasse avec salon de jardin et vue sur les villas"
+                    width={500}
+                    height={375}
                     className="w-full h-full object-cover"
                   />
                 </div>
