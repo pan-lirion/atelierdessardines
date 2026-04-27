@@ -1,7 +1,7 @@
 import FadeIn from '@/components/shared/FadeIn';
 import { ExternalLink, Calendar, Shield, MessageCircle } from 'lucide-react';
 
-const AIRBNB_URL = 'https://airbnb.fr/h/atelierdessardines';
+const AIRBNB_URL = 'https://www.airbnb.fr/rooms/1672590339902388224';
 
 const garanties = [
   { icon: Shield, text: 'Paiement sécurisé via Airbnb' },
@@ -34,6 +34,26 @@ export default function CTAReservation() {
             Réservez directement sur Airbnb pour voir les disponibilités et
             sécuriser votre séjour à Wimereux.
           </p>
+
+          {/* Tarif et offre de lancement */}
+          <div className="mb-10 space-y-3">
+            <div>
+              <span className="font-display text-4xl font-bold text-sea-900">
+                À partir de 99 €/nuit
+              </span>
+              <p className="text-gray-400 text-sm mt-1">
+                Basse saison, hors frais de service Airbnb
+              </p>
+            </div>
+            <div className="inline-block bg-sand-100 border border-sand-300 rounded-2xl px-6 py-4 text-left">
+              <p className="font-semibold text-sea-800 text-base">
+                🎁 Offre de lancement
+              </p>
+              <p className="text-gray-600 text-sm mt-1">
+                −20% automatique sur les premières réservations
+              </p>
+            </div>
+          </div>
 
           {/* CTA principal */}
           <a

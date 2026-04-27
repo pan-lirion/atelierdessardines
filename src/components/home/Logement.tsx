@@ -30,11 +30,11 @@ export default function Logement() {
                 habille le mur du salon.
               </p>
               <p>
-                L&apos;appartement allie le charme authentique de l&apos;architecture
-                locale avec un confort contemporain soigné : matériaux de
-                qualité, literie premium, cuisine entièrement équipée. Tout ce
-                qu&apos;il faut pour souffler, explorer, ou travailler à distance
-                dans un cadre inspirant.
+                L&apos;appartement, entièrement rénové, marie l&apos;esprit de la
+                Côte d&apos;Opale à un confort contemporain soigné : isolation
+                neuve, literie premium, cuisine entièrement équipée. Tout le
+                charme du bord de mer, sans les défauts des vieux logements
+                (humidité, courants d&apos;air).
               </p>
               <p>
                 À <strong>5 minutes à pied</strong> de la digue, des commerces
@@ -47,7 +47,7 @@ export default function Logement() {
               {[
                 { value: '4', label: 'Personnes max' },
                 { value: '5\'', label: 'De la plage' },
-                { value: '100%', label: 'Équipé' },
+                { value: 'Jardin', label: 'Sans vis-à-vis' },
               ].map(({ value, label }) => (
                 <div key={label} className="text-center">
                   <div className="font-display text-3xl font-bold text-sea-700">

@@ -15,9 +15,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "L'Atelier des Sardines — Location Wimereux | Côte d'Opale",
+  title: "Location Wimereux avec jardin privatif & animaux acceptés | L'Atelier des Sardines",
   description:
-    "Appartement de charme à Wimereux, à 5 min de la plage. Location courte durée sur la Côte d'Opale. Idéal pour 2 à 4 personnes. Wifi, cuisine équipée, télétravail.",
+    "Appartement de charme entièrement rénové à 5 min de la digue de Wimereux. Jardin privatif clôturé, animaux acceptés, idéal télétravail. Jusqu'à 4 personnes. À partir de 99€/nuit.",
   keywords: [
     'location Wimereux',
     'appartement Wimereux',
@@ -28,11 +28,28 @@ export const metadata: Metadata = {
     'villa la valkyrie',
   ],
   openGraph: {
-    title: "L'Atelier des Sardines — Location à Wimereux",
+    title: "L'Atelier des Sardines — Location Wimereux avec jardin privatif",
     description:
-      "Appartement de charme à 5 min de la plage de Wimereux. Ambiance atelier, confort moderne, vue Côte d'Opale.",
+      "Appartement de charme à 5 min de la digue. Jardin clôturé, animaux acceptés, télétravail. À partir de 99€/nuit.",
+    url: 'https://www.atelierdessardines.fr',
+    siteName: "L'Atelier des Sardines",
+    images: [
+      {
+        url: 'https://www.atelierdessardines.fr/images/salon-fresque.jpg',
+        width: 1200,
+        height: 630,
+        alt: "Salon de l'Atelier des Sardines avec sa fresque de sardines, location Wimereux",
+      },
+    ],
     locale: 'fr_FR',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "L'Atelier des Sardines — Location Wimereux avec jardin privatif",
+    description:
+      "Appartement de charme à 5 min de la digue. Jardin clôturé, animaux acceptés, télétravail. À partir de 99€/nuit.",
+    images: ['https://www.atelierdessardines.fr/images/salon-fresque.jpg'],
   },
   robots: {
     index: true,
