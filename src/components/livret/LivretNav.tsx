@@ -1,25 +1,27 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 
-const sections = [
-  { id: 'bienvenue', label: 'Bienvenue' },
-  { id: 'acces', label: 'Accès' },
-  { id: 'regles', label: 'Règles' },
-  { id: 'canape-lit', label: 'Canapé-lit' },
-  { id: 'alcove', label: 'Alcôve' },
-  { id: 'cuisson', label: 'Four' },
-  { id: 'lave-vaisselle', label: 'Vaisselle' },
-  { id: 'machine-laver', label: 'Linge' },
-  { id: 'seche-serviettes', label: 'Serviettes' },
-  { id: 'cuisine', label: 'Cuisine' },
-  { id: 'dechets', label: 'Déchets' },
-  { id: 'depart', label: 'Départ' },
-  { id: 'contacts', label: 'Contacts' },
-  { id: 'alentours', label: 'Alentours' },
-];
+const sectionIds = [
+  { id: 'bienvenue', key: 'bienvenue' },
+  { id: 'acces', key: 'acces' },
+  { id: 'regles', key: 'regles' },
+  { id: 'canape-lit', key: 'canape' },
+  { id: 'alcove', key: 'alcove' },
+  { id: 'cuisson', key: 'cuisson' },
+  { id: 'lave-vaisselle', key: 'vaisselle' },
+  { id: 'machine-laver', key: 'linge' },
+  { id: 'seche-serviettes', key: 'serviettes' },
+  { id: 'cuisine', key: 'cuisine' },
+  { id: 'dechets', key: 'dechets' },
+  { id: 'depart', key: 'depart' },
+  { id: 'contacts', key: 'contacts' },
+  { id: 'alentours', key: 'alentours' },
+] as const;
 
 export default function LivretNav() {
+  const t = useTranslations('LivretNav');
   const [active, setActive] = useState('bienvenue');
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -27,23 +29,18 @@ export default function LivretNav() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
+          if (entry.isIntersecting) setActive(entry.target.id);
         });
       },
       { rootMargin: '-40% 0px -55% 0px' }
     );
-
-    sections.forEach(({ id }) => {
+    sectionIds.forEach(({ id }) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
-
     return () => observer.disconnect();
   }, []);
 
-  // Auto-scroll active tab into view
   useEffect(() => {
     const btn = navRef.current?.querySelector(`[data-id="${active}"]`) as HTMLElement;
     btn?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
@@ -56,7 +53,7 @@ export default function LivretNav() {
         className="flex gap-1 overflow-x-auto scrollbar-none px-4 py-3 max-w-3xl mx-auto"
         style={{ scrollbarWidth: 'none' }}
       >
-        {sections.map(({ id, label }) => (
+        {sectionIds.map(({ id, key }) => (
           <a
             key={id}
             href={`#${id}`}
@@ -67,7 +64,7 @@ export default function LivretNav() {
                 : 'text-gray-500 hover:bg-sand-100 hover:text-gray-700'
             }`}
           >
-            {label}
+            {t(key)}
           </a>
         ))}
       </div>

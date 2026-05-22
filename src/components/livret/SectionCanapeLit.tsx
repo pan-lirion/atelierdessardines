@@ -1,56 +1,39 @@
+import { getTranslations } from 'next-intl/server';
 import LivretSection, { Steps, InfoBox } from './LivretSection';
 import { Sofa } from 'lucide-react';
 
-export default function SectionCanapeLit() {
+export default async function SectionCanapeLit() {
+  const t = await getTranslations('SectionCanapeLit');
+
   return (
-    <LivretSection id="canape-lit" icon={Sofa} title="Le canapé-lit" accent="sand">
-      <p>
-        Le canapé-lit se trouve dans le salon. Il peut accueillir confortablement
-        2 personnes avec son matelas de qualité supérieure.
-      </p>
+    <LivretSection id="canape-lit" icon={Sofa} title={t('title')} accent="sand">
+      <p>{t('intro')}</p>
 
       <div>
-        <p className="font-semibold text-gray-800 mb-2">📦 Où trouver la literie</p>
+        <p className="font-semibold text-gray-800 mb-2">{t('find_title')}</p>
         <ul className="space-y-2 text-sm">
           <li className="flex items-start gap-2">
             <span className="w-1.5 h-1.5 bg-sand-400 rounded-full flex-shrink-0 mt-1.5" />
-            <span><strong>La couette</strong> se trouve dans le meuble du salon</span>
+            <span>{t.rich('couette', { b: (c) => <strong>{c}</strong> })}</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="w-1.5 h-1.5 bg-sand-400 rounded-full flex-shrink-0 mt-1.5" />
-            <span><strong>Les oreillers</strong> sont dans le rangement intérieur du canapé-lit</span>
+            <span>{t.rich('oreillers', { b: (c) => <strong>{c}</strong> })}</span>
           </li>
         </ul>
       </div>
 
       <div>
-        <p className="font-semibold text-gray-800 mb-2">Comment le déplier</p>
-        <Steps
-          items={[
-            'Retirez les coussins du canapé et posez-les de côté',
-            'Tirez sur la lanière située au centre du dossier du canapé',
-            'Dépliez le matelas en tirant la structure vers vous jusqu\'à ce qu\'elle soit à plat',
-            'Récupérez la couette dans le meuble du salon et les oreillers dans le rangement intérieur',
-          ]}
-        />
+        <p className="font-semibold text-gray-800 mb-2">{t('unfold_title')}</p>
+        <Steps items={[t('unfold0'), t('unfold1'), t('unfold2'), t('unfold3')]} />
       </div>
 
       <div>
-        <p className="font-semibold text-gray-800 mb-2">Comment le replier au départ</p>
-        <Steps
-          items={[
-            'Retirez les draps',
-            'Rangez la couette dans le meuble du salon',
-            'Repliez le matelas en poussant la structure vers le canapé',
-            'Ramenez l\'assise en position canapé et replacez les coussins',
-          ]}
-        />
+        <p className="font-semibold text-gray-800 mb-2">{t('fold_title')}</p>
+        <Steps items={[t('fold0'), t('fold1'), t('fold2'), t('fold3')]} />
       </div>
 
-      <InfoBox type="tip">
-        Merci de replier le canapé-lit avant votre départ — voir la checklist
-        dans la section Départ.
-      </InfoBox>
+      <InfoBox type="tip">{t('tip')}</InfoBox>
     </LivretSection>
   );
 }

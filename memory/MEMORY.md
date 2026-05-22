@@ -1,0 +1,1 @@
+- [Projet L'Atelier des Sardines](project_atelierdessardines.md) — Site Next.js vitrine + livret d'accueil pour location Wimereux, stack/structure/i18n/todo propriétaire

@@ -1,68 +1,48 @@
+import { getTranslations } from 'next-intl/server';
 import LivretSection, { Steps, InfoBox } from './LivretSection';
 import { Flame } from 'lucide-react';
 
-export default function SectionCuisson() {
+export default async function SectionCuisson() {
+  const t = await getTranslations('SectionCuisson');
+
   return (
-    <LivretSection id="cuisson" icon={Flame} title="Le four & micro-ondes" accent="orange">
+    <LivretSection id="cuisson" icon={Flame} title={t('title')} accent="orange">
       <div>
-        <p className="font-semibold text-gray-800 mb-2">📡 Micro-ondes combiné</p>
-        <p className="mb-2">
-          Le mode d&apos;emploi complet se trouve dans le <strong>placard
-          au-dessus</strong> du micro-ondes.
-        </p>
-        <Steps
-          items={[
-            "Placez votre plat dans le micro-ondes (pas de métal ni d'alu !)",
-            'Sélectionnez la puissance et le temps',
-            'Appuyez sur Start',
-          ]}
-        />
+        <p className="font-semibold text-gray-800 mb-2">{t('micro_title')}</p>
+        <p className="mb-2">{t.rich('micro_manual', { b: (c) => <strong>{c}</strong> })}</p>
+        <Steps items={[t('micro0'), t('micro1'), t('micro2')]} />
       </div>
 
       <div>
-        <p className="font-semibold text-gray-800 mb-2">🍳 Plaques vitrocéramique</p>
-        <p>
-          Les plaques sont en <strong>vitrocéramique</strong>. Attendez
-          qu&apos;elles soient complètement refroidies avant de les nettoyer.
-        </p>
+        <p className="font-semibold text-gray-800 mb-2">{t('plaques_title')}</p>
+        <p>{t.rich('plaques_p', { b: (c) => <strong>{c}</strong> })}</p>
       </div>
 
       <div>
         <p className="font-semibold text-gray-800 mb-2">
-          🧀 Raclette à la bougie{' '}
-          <span className="text-xs font-normal text-gray-400">(automne / hiver)</span>
+          {t('raclette_title')}{' '}
+          <span className="text-xs font-normal text-gray-400">{t('raclette_season')}</span>
         </p>
-        <p>
-          Besoin de réconfort par temps froid ? Des poêlons à raclette à la
-          bougie sont à votre disposition !
-        </p>
+        <p>{t('raclette_p')}</p>
         <ul className="mt-2 space-y-1 text-sm">
-          <li className="flex items-start gap-2">
-            <span className="w-1.5 h-1.5 bg-orange-400 rounded-full flex-shrink-0 mt-1.5" />
-            Les bougies sont fournies
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="w-1.5 h-1.5 bg-orange-400 rounded-full flex-shrink-0 mt-1.5" />
-            2 à 3 bougies sont nécessaires pour une bonne chauffe
-          </li>
+          {[t('raclette1'), t('raclette2')].map((item) => (
+            <li key={item} className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 bg-orange-400 rounded-full flex-shrink-0 mt-1.5" />
+              {item}
+            </li>
+          ))}
         </ul>
       </div>
 
       <div>
         <p className="font-semibold text-gray-800 mb-2">
-          🔥 Plancha électrique{' '}
-          <span className="text-xs font-normal text-gray-400">(printemps / été)</span>
+          {t('plancha_title')}{' '}
+          <span className="text-xs font-normal text-gray-400">{t('plancha_season')}</span>
         </p>
-        <p>
-          Une plancha électrique est disponible en saison pour vos grillades —
-          idéale sur la terrasse.
-        </p>
+        <p>{t('plancha_p')}</p>
       </div>
 
-      <InfoBox type="warning">
-        Ne laissez jamais les plaques allumées sans surveillance. Vérifiez
-        qu&apos;elles sont bien éteintes avant de quitter la cuisine.
-      </InfoBox>
+      <InfoBox type="warning">{t('warning')}</InfoBox>
     </LivretSection>
   );
 }

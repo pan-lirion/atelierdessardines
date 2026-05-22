@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import LivretNav from '@/components/livret/LivretNav';
 import LivretHero from '@/components/livret/LivretHero';
@@ -15,17 +16,26 @@ import SectionDechets from '@/components/livret/SectionDechets';
 import SectionDepart from '@/components/livret/SectionDepart';
 import SectionContacts from '@/components/livret/SectionContacts';
 import SectionAlentours from '@/components/livret/SectionAlentours';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { ArrowLeft, Download } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: "Livret d'accueil — L'Atelier des Sardines, Wimereux",
-  description:
-    "Tout ce qu'il faut savoir pour votre séjour à L'Atelier des Sardines : accès, WiFi, équipements, bons plans à Wimereux, contacts utiles.",
-  robots: { index: false },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
+  return {
+    title: t('livret_title'),
+    description: t('livret_description'),
+    robots: { index: false },
+  };
+}
 
-export default function LivretPage() {
+export default async function LivretPage() {
+  const t = await getTranslations('LivretPage');
+
   return (
     <div className="min-h-screen bg-cream font-body">
       {/* Barre supérieure */}
@@ -36,7 +46,7 @@ export default function LivretPage() {
             className="inline-flex items-center gap-2 text-sm hover:text-white transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            Retour au site
+            {t('back')}
           </Link>
           <a
             href="/livret.pdf"
@@ -44,7 +54,7 @@ export default function LivretPage() {
             className="inline-flex items-center gap-2 bg-sand-400 hover:bg-sand-500 text-white text-sm font-medium px-4 py-1.5 rounded-full transition-colors"
           >
             <Download className="w-3.5 h-3.5" />
-            Télécharger le PDF
+            {t('download_pdf')}
           </a>
         </div>
       </div>
@@ -69,17 +79,16 @@ export default function LivretPage() {
         <SectionAlentours />
       </main>
 
-      {/* Footer */}
       <footer className="bg-sea-900 text-white/60 py-8 px-4">
         <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
-          <span>L&apos;Atelier des Sardines — 7 rue du Maréchal de Lattre de Tassigny, 62930 Wimereux</span>
+          <span>{t('footer_address')}</span>
           <a
             href="/livret.pdf"
             download="Livret-Atelier-des-Sardines.pdf"
             className="inline-flex items-center gap-2 hover:text-white transition-colors"
           >
             <Download className="w-4 h-4" />
-            Version PDF
+            {t('footer_pdf')}
           </a>
         </div>
       </footer>

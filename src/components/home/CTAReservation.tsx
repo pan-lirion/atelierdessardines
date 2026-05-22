@@ -1,21 +1,20 @@
+import { getTranslations } from 'next-intl/server';
 import FadeIn from '@/components/shared/FadeIn';
 import { ExternalLink, Calendar, Shield, MessageCircle } from 'lucide-react';
 
 const AIRBNB_URL = 'https://www.airbnb.fr/rooms/1672590339902388224';
 
-const garanties = [
-  { icon: Shield, text: 'Paiement sécurisé via Airbnb' },
-  { icon: Calendar, text: 'Annulation flexible' },
-  { icon: MessageCircle, text: 'Réponse en moins de 24h' },
-];
+export default async function CTAReservation() {
+  const t = await getTranslations('CTAReservation');
 
-export default function CTAReservation() {
+  const garanties = [
+    { icon: Shield, key: 'garantie1' },
+    { icon: Calendar, key: 'garantie2' },
+    { icon: MessageCircle, key: 'garantie3' },
+  ] as const;
+
   return (
-    <section
-      id="reservation"
-      className="section-padding relative overflow-hidden"
-    >
-      {/* Fond dégradé */}
+    <section id="reservation" className="section-padding relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-sand-100 via-cream to-sea-50" />
       <div className="absolute -top-40 -right-40 w-96 h-96 bg-sea-100 rounded-full opacity-40 blur-3xl" />
       <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-sand-200 rounded-full opacity-40 blur-3xl" />
@@ -23,39 +22,26 @@ export default function CTAReservation() {
       <div className="relative max-w-4xl mx-auto text-center">
         <FadeIn>
           <p className="text-sea-500 font-medium tracking-widest text-xs uppercase mb-4">
-            Réservation
+            {t('label')}
           </p>
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-sea-900 leading-tight mb-6">
-            Prêt à entendre
+            {t('title1')}
             <br />
-            <span className="text-sand-500">le bruit des vagues ?</span>
+            <span className="text-sand-500">{t('title2')}</span>
           </h2>
-          <p className="text-gray-500 text-lg max-w-xl mx-auto mb-10">
-            Réservez directement sur Airbnb pour voir les disponibilités et
-            sécuriser votre séjour à Wimereux.
-          </p>
+          <p className="text-gray-500 text-lg max-w-xl mx-auto mb-10">{t('desc')}</p>
 
-          {/* Tarif et offre de lancement */}
           <div className="mb-10 space-y-3">
             <div>
-              <span className="font-display text-4xl font-bold text-sea-900">
-                À partir de 99 €/nuit
-              </span>
-              <p className="text-gray-400 text-sm mt-1">
-                Basse saison, hors frais de service Airbnb
-              </p>
+              <span className="font-display text-4xl font-bold text-sea-900">{t('price')}</span>
+              <p className="text-gray-400 text-sm mt-1">{t('price_note')}</p>
             </div>
             <div className="inline-block bg-sand-100 border border-sand-300 rounded-2xl px-6 py-4 text-left">
-              <p className="font-semibold text-sea-800 text-base">
-                🎁 Offre de lancement
-              </p>
-              <p className="text-gray-600 text-sm mt-1">
-                −20% automatique sur les premières réservations
-              </p>
+              <p className="font-semibold text-sea-800 text-base">{t('offer_title')}</p>
+              <p className="text-gray-600 text-sm mt-1">{t('offer_desc')}</p>
             </div>
           </div>
 
-          {/* CTA principal */}
           <a
             href={AIRBNB_URL}
             target="_blank"
@@ -63,16 +49,15 @@ export default function CTAReservation() {
             className="inline-flex items-center gap-3 bg-sea-600 hover:bg-sea-500 text-white font-semibold px-10 py-5 rounded-full text-lg transition-all hover:shadow-2xl hover:shadow-sea-300/40 hover:-translate-y-1"
           >
             <Calendar className="w-5 h-5" />
-            Voir les disponibilités
+            {t('cta')}
             <ExternalLink className="w-4 h-4 opacity-70" />
           </a>
 
-          {/* Garanties */}
           <div className="flex flex-col sm:flex-row justify-center gap-6 mt-12 pt-10 border-t border-sand-200">
-            {garanties.map(({ icon: Icon, text }) => (
-              <div key={text} className="flex items-center gap-2 text-gray-500 text-sm">
+            {garanties.map(({ icon: Icon, key }) => (
+              <div key={key} className="flex items-center gap-2 text-gray-500 text-sm">
                 <Icon className="w-4 h-4 text-sea-400 flex-shrink-0" />
-                <span>{text}</span>
+                <span>{t(key)}</span>
               </div>
             ))}
           </div>

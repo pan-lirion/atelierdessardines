@@ -1,39 +1,27 @@
-import LivretSection, { InfoBox } from './LivretSection';
+import { getTranslations } from 'next-intl/server';
+import LivretSection from './LivretSection';
 import { BedDouble } from 'lucide-react';
 
-export default function SectionAlcove() {
+export default async function SectionAlcove() {
+  const t = await getTranslations('SectionAlcove');
+
   return (
-    <LivretSection id="alcove" icon={BedDouble} title="L'alcôve" accent="sea">
-      <p>
-        L&apos;alcôve est un espace intime et cosy, pensé comme un vrai refuge.
-        Le lit est encastré entre deux cloisons, créant une atmosphère de
-        cabine de bateau — parfaite pour dormir au son imaginaire des vagues.
-      </p>
+    <LivretSection id="alcove" icon={BedDouble} title={t('title')} accent="sea">
+      <p>{t('intro')}</p>
 
       <div>
-        <p className="font-semibold text-gray-800 mb-2">🛏️ Literie</p>
-        <p>
-          Le lit est fait à votre arrivée avec des draps propres et des
-          oreillers. Une couverture supplémentaire se trouve dans le{' '}
-          <strong>meuble du salon</strong>.
-        </p>
+        <p className="font-semibold text-gray-800 mb-2">{t('literie_title')}</p>
+        <p>{t.rich('literie_p', { b: (c) => <strong>{c}</strong> })}</p>
       </div>
 
       <div>
-        <p className="font-semibold text-gray-800 mb-2">💡 Éclairage</p>
-        <p>
-          Des <strong>lampes murales</strong> équipent l&apos;alcôve, avec des
-          prises intégrées pour recharger votre téléphone ou tout autre appareil
-          sans quitter le lit.
-        </p>
+        <p className="font-semibold text-gray-800 mb-2">{t('eclairage_title')}</p>
+        <p>{t.rich('eclairage_p', { b: (c) => <strong>{c}</strong> })}</p>
       </div>
 
       <div>
-        <p className="font-semibold text-gray-800 mb-2">🧳 Rangements</p>
-        <p>
-          Des <strong>cintres sont disponibles au niveau du nez de cloison</strong>,
-          juste à l&apos;entrée de l&apos;alcôve, pour suspendre vos vêtements à portée de main.
-        </p>
+        <p className="font-semibold text-gray-800 mb-2">{t('rangements_title')}</p>
+        <p>{t.rich('rangements_p', { b: (c) => <strong>{c}</strong> })}</p>
       </div>
     </LivretSection>
   );
