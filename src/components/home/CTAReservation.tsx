@@ -31,17 +31,6 @@ export default async function CTAReservation() {
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto mb-10">{t('desc')}</p>
 
-          <div className="mb-10 space-y-3">
-            <div>
-              <span className="font-display text-4xl font-bold text-sea-900">{t('price')}</span>
-              <p className="text-gray-400 text-sm mt-1">{t('price_note')}</p>
-            </div>
-            <div className="inline-block bg-sand-100 border border-sand-300 rounded-2xl px-6 py-4 text-left">
-              <p className="font-semibold text-sea-800 text-base">{t('offer_title')}</p>
-              <p className="text-gray-600 text-sm mt-1">{t('offer_desc')}</p>
-            </div>
-          </div>
-
           <a
             href={AIRBNB_URL}
             target="_blank"

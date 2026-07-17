@@ -1,9 +1,9 @@
 {
   "Metadata": {
     "home_title": "Ferienwohnung Wimereux mit Privatgarten & Haustiere willkommen | L'Atelier des Sardines",
-    "home_description": "Charmante, vollständig renovierte Wohnung 5 Min. vom Strand in Wimereux. Eingezäunter Privatgarten, Haustiere willkommen, ideal für Homeoffice. Bis zu 4 Personen. Ab 99 €/Nacht.",
+    "home_description": "Charmante, vollständig renovierte Wohnung 5 Min. vom Strand in Wimereux. Eingezäunter Privatgarten, Haustiere willkommen, ideal für Homeoffice. Bis zu 4 Personen.",
     "home_og_title": "L'Atelier des Sardines — Ferienwohnung Wimereux mit Privatgarten",
-    "home_og_description": "Charmante Wohnung 5 Min. vom Strand. Eingezäunter Garten, Haustiere willkommen, Homeoffice. Ab 99 €/Nacht.",
+    "home_og_description": "Charmante Wohnung 5 Min. vom Strand. Eingezäunter Garten, Haustiere willkommen, Homeoffice. Bis zu 4 Personen.",
     "home_og_alt": "Wohnzimmer von L'Atelier des Sardines mit dem Sardinenfresko, Ferienwohnung Wimereux",
     "livret_title": "Gästemappe — L'Atelier des Sardines, Wimereux",
     "livret_description": "Alles, was Sie für Ihren Aufenthalt im L'Atelier des Sardines wissen müssen: Zugang, WLAN, Ausstattung, Tipps für Wimereux, nützliche Kontakte."
@@ -151,10 +151,6 @@
     "title1": "Bereit, das Rauschen",
     "title2": "der Wellen zu hören?",
     "desc": "Buchen Sie direkt auf Airbnb, um die Verfügbarkeit zu prüfen und Ihren Aufenthalt in Wimereux zu sichern.",
-    "price": "Ab 99 €/Nacht",
-    "price_note": "Nebensaison, ohne Airbnb-Servicegebühren",
-    "offer_title": "🎁 Eröffnungsangebot",
-    "offer_desc": "Automatisch −20% auf erste Buchungen",
     "cta": "Verfügbarkeit prüfen",
     "garantie1": "Sichere Zahlung über Airbnb",
     "garantie2": "Flexible Stornierung",

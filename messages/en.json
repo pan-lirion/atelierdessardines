@@ -1,9 +1,9 @@
 {
   "Metadata": {
     "home_title": "Wimereux Holiday Rental with Private Garden & Pets Welcome | L'Atelier des Sardines",
-    "home_description": "Charming fully renovated apartment 5 min from the seafront in Wimereux. Private enclosed garden, pets welcome, ideal for remote working. Up to 4 guests. From €99/night.",
+    "home_description": "Charming fully renovated apartment 5 min from the seafront in Wimereux. Private enclosed garden, pets welcome, ideal for remote working. Up to 4 guests.",
     "home_og_title": "L'Atelier des Sardines — Wimereux Holiday Rental with Private Garden",
-    "home_og_description": "Charming apartment 5 min from the seafront. Enclosed garden, pets welcome, remote working. From €99/night.",
+    "home_og_description": "Charming apartment 5 min from the seafront. Enclosed garden, pets welcome, remote working. Up to 4 guests.",
     "home_og_alt": "Living room of L'Atelier des Sardines with its sardine fresco, Wimereux holiday rental",
     "livret_title": "Guest Guide — L'Atelier des Sardines, Wimereux",
     "livret_description": "Everything you need to know for your stay at L'Atelier des Sardines: access, WiFi, equipment, tips for Wimereux, useful contacts."
@@ -151,10 +151,6 @@
     "title1": "Ready to hear",
     "title2": "the sound of the waves?",
     "desc": "Book directly on Airbnb to check availability and secure your stay in Wimereux.",
-    "price": "From €99/night",
-    "price_note": "Low season, excluding Airbnb service fees",
-    "offer_title": "🎁 Launch offer",
-    "offer_desc": "Automatic −20% on first bookings",
     "cta": "Check availability",
     "garantie1": "Secure payment via Airbnb",
     "garantie2": "Flexible cancellation",
